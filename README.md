@@ -8,15 +8,14 @@
 
 ## BancoUni
 
-## Integrantes: <a>Adeilson Nunes</a>, <a >Daniela Pauzer</a>, <a> Enzo Sangiacomo</a>, <a> Luiza Correia</a>, 
+## Integrantes: <a>Adeilson Nunes</a>, <a >Daniela Pauzer</a>, <a> Enzo Sangiacomo</a> e <a> Luiza Correia</a>, 
 
-## Professores Orientadores: <a> Vinicius Heltai</a>, <a> Jefferson Silva</a>, <a> Aimar Lopes</a>, <a> Francisco Escobar</a>
+## Professores Orientadores: <a> Vinicius Heltai</a>, <a> Jefferson Silva</a>, <a> Aimar Lopes</a> e <a> Francisco Escobar</a>
 
 ## Descrição
 
 <p align="center">
-<img Designer__1_-removebg-preview](https://github.com/user-attachments/assets/c17626c2-d6ab-47b0-89b5-abc6c74de2c7)
->
+ Designer__1_-removebg-preview](https://github.com/user-attachments/assets/c17626c2-d6ab-47b0-89b5-abc6c74de2c7)
 </p>
 
 
