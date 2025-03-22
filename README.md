@@ -6,9 +6,7 @@
 
 # 
 
-## BancoUni# Meu Projeto
-
-<span style="color: blue;">BancoUni</span>
+## BancoUni
 
 ## Integrantes: <a>Adeilson Nunes</a>, <a >Daniela Pauzer</a>, <a> Enzo Sangiacomo</a>, <a> Luiza Correia</a>, 
 
