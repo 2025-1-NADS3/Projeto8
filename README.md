@@ -15,17 +15,12 @@
 ## Descrição
 
 <p align="center">
- Designer__1_-removebg-preview](https://github.com/user-attachments/assets/c17626c2-d6ab-47b0-89b5-abc6c74de2c7)
+  <img src="imagens/sua-imagem.png" alt="Logo BancoUni" />
 </p>
 
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+O BancoUni foi desenvolvido para atender às necessidades financeiras dos estudantes, oferecendo as funcionalidades básicas de um banco tradicional, mas com a educação financeira aplicada. Pensado para o ambiente acadêmico, o aplicativo visa proporcionar aos usuários uma gestão financeira prática e eficiente, além de promover o aprendizado sobre finanças pessoais.
 <br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
-<br><br>
-
 ## 🛠 Estrutura de pastas
 
 -Raiz<br>
