@@ -8,14 +8,14 @@
 
 ## BancoUni
 
-## Integrantes: <a>Adeilson Nunes</a>, <a >Daniela Pauzer</a>, <a> Enzo Sangiacomo</a> e <a> Luiza Correia</a>, 
+## Integrantes: <a>Adeilson Nunes</a>, <a >Daniela Pauzer</a>, <a> Enzo Sangiacomo</a> e <a> Luiza Correia</a>
 
 ## Professores Orientadores: <a> Vinicius Heltai</a>, <a> Jefferson Silva</a>, <a> Aimar Lopes</a> e <a> Francisco Escobar</a>
 
 ## Descrição
 
 <p align="center">
-  <img src="imagens/sua-imagem.png" alt="Logo BancoUni" />
+  <img src="imagens/img bancoUni.PNG" alt="Logo BancoUni" />
 </p>
 
 
