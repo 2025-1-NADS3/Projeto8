@@ -8,15 +8,15 @@
 
 ## Nome do Grupo
 
-## Integrantes: <a>Adeilson Nunes</a>, <a >Daniela Pauzer</a>, <a Enzo Sangiacomo</a>, <a Luiza Correia</a>, 
+## Integrantes: <a>Adeilson Nunes</a>, <a >Daniela Pauzer</a>, <a> Enzo Sangiacomo</a>, <a> Luiza Correia</a>, 
 
-## Professores Orientadores: <a href="https://www.linkedin.com/in/victorbarq/">Dr. Victor Von Doom</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Saitama</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Strange</a>, <a href="https://www.linkedin.com/in/victorbarq/">Me. Yoda</a>, <a href="https://www.linkedin.com/in/victorbarq/">Dr. Gero</a>
+## Professores Orientadores: <a> Vinicius Heltai</a> <a> Jefferson Silva</a>, <a> Aimar Lopes</a>, <a> Francisco Escobar</a>
 
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="NOME DO JOGO" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<img src=![Designer__1_-removebg-preview](https://github.com/user-attachments/assets/c17626c2-d6ab-47b0-89b5-abc6c74de2c7)
+>
 </p>
 
 
