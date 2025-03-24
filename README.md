@@ -31,7 +31,6 @@ O BancoUni foi desenvolvido para atender às necessidades financeiras dos estuda
 |-->executáveis<br>
   &emsp;|-->windows<br>
   &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
   &emsp;|-->Backend<br>
@@ -43,57 +42,35 @@ O BancoUni foi desenvolvido para atender às necessidades financeiras dos estuda
 
 <b>Android:</b>
 
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>Windows:</b>
-
-Não há instalação! Apenas executável!
-Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro programa.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
+Faça o Download do aplicativo UniBanco 
 
 ## 💻 Configuração para Desenvolvimento
+IDE: Android Studio
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+Versão recomendada: [Exemplo: Android Studio Dolphin | 2021.3.1]
 
-Para abrir este projeto você necessita das seguintes ferramentas:
+Android SDK versão: [Exemplo: 30 (Android 11)]
 
--<a href="https://godotengine.org/download">GODOT</a>
+Linguagem de Programação: JAVA
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
+Ferramenta de Design: Figma
 
+Figma foi usado para criar todos os protótipos e mockups da interface do usuário (UI) do app.
+
+Banco de dados remoto: MySQL
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
 
-* 0.2.1 - 25/01/2022
-    * MUDANÇA: Atualização de docs (código do módulo permanece inalterado)
-* 0.2.0 - 15/01/2022
-    * MUDANÇA: Remove `setDefaultXYZ()`
-    * ADD: Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * CONSERTADO: Crash quando chama `baz()` (Obrigado @NomeDoContribuidorGeneroso!)
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * MUDANÇA: Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 03/03/2025
+    *  Inauguração do design no figma e Wireframe
+* 10/03/2025
+    * Desenvolvimento do diagrama dos processos de software
+  
+* 13/03/2025
+    * desenvolvimento do FrontEnd no Android Studio, primeiros botões e formulários
+* 17/03/2025
+   
 
 ## 📋 Licença/License
 
