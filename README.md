@@ -47,9 +47,9 @@ Faça o Download do aplicativo UniBanco
 ## 💻 Configuração para Desenvolvimento
 IDE: Android Studio
 
-Versão recomendada: [Exemplo: Android Studio Dolphin | 2021.3.1]
+Versão: [ Android Studio 2024]
 
-Android SDK versão: [Exemplo: 30 (Android 11)]
+Android SDK versão: [ 30 (Android 11)]
 
 Linguagem de Programação: JAVA
 
@@ -58,6 +58,11 @@ Ferramenta de Design: Figma
 Figma foi usado para criar todos os protótipos e mockups da interface do usuário (UI) do app.
 
 Banco de dados remoto: MySQL
+
+##🖌️ Design 
+
+*WireFrame, StoryBoard e Prototipação pelo Figma
+logo, paleta de Cores 
 ## 🗃 Histórico de lançamentos
 
 A cada atualização os detalhes devem ser lançados aqui.
