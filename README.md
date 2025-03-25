@@ -15,7 +15,8 @@
 ## Descrição
 
 <p align="center">
-![Designer__1_-removebg-preview](https://github.com/user-attachments/assets/619e068d-aaa5-4576-b0bf-b44fc022f9b4)
+![Designer__1_-removebg-preview](https://github.com/Projeto8/Imagens/raw/main/imagens/img bancoUni.PNG)
+
 
 </p>
 
