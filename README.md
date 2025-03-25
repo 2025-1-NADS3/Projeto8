@@ -15,11 +15,8 @@
 ## Descrição
 
 <p align="center">
-![Designer__1_-removebg-preview](https://github.com/Projeto8/Imagens/raw/main/imagens/img bancoUni.PNG)
-
-
+![BancoUni](imagens/bancoUni.PNG)
 </p>
-
 
 O BancoUni foi desenvolvido para atender às necessidades financeiras dos estudantes, oferecendo as funcionalidades básicas de um banco tradicional, mas com a educação financeira aplicada. Pensado para o ambiente acadêmico, o aplicativo visa proporcionar aos usuários uma gestão financeira prática e eficiente, além de promover o aprendizado sobre finanças pessoais.
 <br><br>
