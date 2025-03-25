@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main" <!-- ID da raiz do layout -->
+    android:layout_width="match_parent" 
+    android:layout_height="match_parent" 
+    android:background="#EFF5F9"> <!-- Cor de fundo do layout -->
+
+    <!-- Título do app "BancoUni" -->
+    <TextView
+        android:id="@+id/textView"
+        android:text="BancoUni" <!-- Texto exibido no TextView -->
+        android:textColor="#385A6D" <!-- Cor do texto -->
+        android:textSize="30sp" <!-- Tamanho do texto -->
+        app:layout_constraintBottom_toBottomOf="parent" <!-- Posiciona no centro da tela -->
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" /> 
+
+    <!-- Imagem centralizada na tela -->
+    <ImageView
+        android:id="@+id/imageView2"
+        app:srcCompat="@drawable/designer__1__removebg_preview" /> <!-- Imagem a ser exibida -->
+
+    <!-- Campo para o nome do usuário -->
+    <EditText
+        android:id="@+id/editTextText"
+        android:text="Name" <!-- Texto exibido no campo de entrada -->
+        app:layout_constraintBottom_toTopOf="@+id/editTextTextPassword" <!-- Posiciona acima do campo de senha -->
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" /> <!-- Posiciona abaixo da imagem -->
+
+    <!-- Campo para a senha do usuário -->
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        app:layout_constraintBottom_toBottomOf="parent" /> <!-- Posiciona no fundo do layout -->
+
+    <!-- Botão de login -->
+    <Button
+        android:id="@+id/button"
+        android:text="Entrar" <!-- Texto exibido no botão -->
+        app:layout_constraintBottom_toBottomOf="parent" <!-- Posiciona no fundo do layout -->
+        app:layout_constraintTop_toBottomOf="@+id/editTextText" /> <!-- Posiciona abaixo do campo de nome -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
