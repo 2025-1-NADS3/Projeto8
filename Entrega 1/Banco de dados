@@ -1,13 +1,11 @@
 package br.fecap.ads.appneonlogin;
 
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
 import android.util.Log;
 import java.util.HashMap;
 import java.util.Map;
@@ -18,58 +16,54 @@ import com.google.firebase.database.FirebaseDatabase;
 import android.widget.Button;
 import android.widget.TextView;
 
-
-
-
-
-
 public class MainActivity extends AppCompatActivity {
 
+    // Referência para o banco de dados do Firebase
     DatabaseReference databaseRef;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        // Habilita o modo Edge-to-Edge, que faz a interface ocupar toda a tela
         EdgeToEdge.enable(this);
+        
+        // Configura o layout da activity
         setContentView(R.layout.activity_main);
 
-        //iniciar firebase
+        // Inicializa o Firebase Database e cria uma referência para a "tabela" de usuários
         FirebaseDatabase database = FirebaseDatabase.getInstance();
-        databaseRef = database.getReference("usuarios"); // Cria referência à "tabela" usuários
+        databaseRef = database.getReference("usuarios"); // Referência para "usuarios"
 
+        // Referências para os elementos da UI (botões e textos)
         Button logarBtn = findViewById(R.id.logarBtn);
         TextView textinsiraseunome = findViewById(R.id.textinsiraseunome);
         TextView insirasuasenha = findViewById(R.id.insirasuasenha);
         TextView textdelete = findViewById(R.id.textdelete);
 
-
-
+        // Criando um mapa com os dados do usuário (para salvar no Firebase)
         Map<String, Object> user = new HashMap<>();
-        user.put("nome", "João");
-        user.put("senha", "123456");
+        user.put("nome", "João"); // Nome do usuário
+        user.put("senha", "123456"); // Senha do usuário
 
+        // Salva os dados no Firebase Database
         databaseRef.push().setValue(user)
                 .addOnSuccessListener(aVoid -> {
+                    // Se o salvamento for bem-sucedido, exibe uma mensagem no log
                     Log.d("FirebaseDB", "Dados salvos com sucesso!");
                 })
                 .addOnFailureListener(e -> {
+                    // Caso haja erro no salvamento, exibe uma mensagem no log
                     Log.w("FirebaseDB", "Erro ao salvar dados", e);
                 });
 
-
+        // Ajuste do layout para que ele não seja sobreposto pelas barras do sistema (status e navegação)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            // Define o padding da view com base nos insets para evitar que o conteúdo seja coberto pelas barras do sistema
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
-
-
-
-
         });
 
     }
-
 }
-
-
