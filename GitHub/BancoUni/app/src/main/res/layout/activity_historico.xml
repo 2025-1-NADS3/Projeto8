@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6E8CA0">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:text="voltar"
+            android:backgroundTint="#165C90"
+            android:textColor="#FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp">
+
+            <ImageView
+                android:id="@+id/logoBanco"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/logo_bancouni" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Histórico de pagamentos"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#0A2F4F"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:id="@+id/txtData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ontem, 18 de março de 2025"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp" />
+
+        <TextView
+            android:id="@+id/txtSaldoDia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="saldo do dia: R$100,00"
+            android:textColor="#D1D1D1"
+            android:textSize="14sp"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Example Transaction Cards -->
+        <LinearLayout
+            android:id="@+id/layoutTransacoes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Cards will be added dynamically -->
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

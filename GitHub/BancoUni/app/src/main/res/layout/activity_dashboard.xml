@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7A96A6">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="voltar"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#1B5A7D" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:layout_marginTop="32dp">
+
+            <ImageView
+                android:id="@+id/logoBanco"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/logo_bancouni" />
+        </LinearLayout>
+
+
+
+
+        <!-- Saldo -->
+        <TextView
+            android:id="@+id/saldoLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saldo da conta:"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/saldoEditText"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:text="••••"
+                android:enabled="false"
+                android:background="@android:drawable/edit_text"
+                android:padding="10dp"
+                android:textColor="#000000" />
+
+            <ImageButton
+                android:id="@+id/btnToggleSaldo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_menu_view"
+                android:background="@android:color/transparent"
+                android:contentDescription="Ocultar Saldo" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="OCULTAR SALDO"
+                android:textColor="#FFFFFF"
+                android:textSize="10sp"
+                android:layout_marginStart="4dp"/>
+        </LinearLayout>
+
+        <!-- Grid Buttons -->
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="2"
+            android:layout_marginTop="24dp"
+            android:columnOrderPreserved="false"
+            android:alignmentMode="alignMargins"
+            android:rowOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <Button
+                android:id="@+id/btnPagamentos"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:text="Pagamentos"
+                android:backgroundTint="#BFC8CF"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnPagamentosAgendados"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:text="Pagamentos agendados"
+                android:backgroundTint="#BFC8CF"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnHistoricoPagamentos"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:text="Histórico de pagamentos"
+                android:backgroundTint="#BFC8CF"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+
+            <Button
+                android:id="@+id/btnEducacaoFinanceira"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_columnWeight="1"
+                android:text="Educação Financeira"
+                android:backgroundTint="#BFC8CF"
+                android:textColor="#000000"
+                android:textStyle="bold"/>
+        </GridLayout>
+
+    </LinearLayout>
+</ScrollView>
+
