@@ -1,0 +1,56 @@
+import unittest
+from unittest.mock import MagicMock
+
+class TestApp(unittest.TestCase):
+
+    def test_campos_vazios(self):
+        app = App()
+        app.show_message = MagicMock()
+        app.name = ""
+        app.password = ""
+        app.handle_login()
+        app.show_message.assert_called_with("Preencha todos os campos")
+
+    def test_login_sucesso(self):
+        app = App()
+        app.show_message = MagicMock()
+        app.name = "admin"
+        app.password = "1234"
+        app.handle_login()
+        app.show_message.assert_called_with("Login bem-sucedido!")
+
+    def test_login_falho(self):
+        app = App()
+        app.show_message = MagicMock()
+        app.name = "usuario"
+        app.password = "senhaerrada"
+        app.handle_login()
+        app.show_message.assert_called_with("Nome ou senha incorretos")
+
+    def test_salvamento_firebase_simples(self):
+        app = App()
+        app.name = "joao"
+        app.password = "abcd"
+        resultado = app.salvar_usuario()
+        self.assertTrue(resultado)
+        self.assertIn("usuarios", app.database)
+
+    def test_integracao_login(self):
+        app = App()
+        app.name = "admin"
+        app.password = "1234"
+        app.show_message = MagicMock()
+        app.handle_login()
+        app.show_message.assert_called_with("Login bem-sucedido!")
+
+    def test_integracao_firebase(self):
+        app = App()
+        app.name = "maria"
+        app.password = "senha123"
+        ok = app.salvar_usuario()
+        self.assertTrue(ok)
+        self.assertEqual(app.database["usuarios"]["nome"], "maria")
+
+
+if __name__ == '__main__':
+    unittest.main()
