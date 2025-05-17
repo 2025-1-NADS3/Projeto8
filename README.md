@@ -13,7 +13,7 @@
 ## Professores Orientadores: <a> Vinicius Heltai</a>, <a> Jefferson Silva</a>, <a> Aimar Lopes</a> e <a> Francisco Escobar</a>
 
 <p align="center">
-  <img src="imagens/logo.png" alt="Logo BancoUni" width="200">
+  <img src="Imagens/img bancoUni.PNG" alt="Logo BancoUni" width="200">
 </p>
 ## Descrição
 
