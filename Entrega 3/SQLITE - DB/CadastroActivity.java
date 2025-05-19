@@ -1,28 +1,31 @@
 package com.example.bancouni;
 
+import com.example.bancouni.DBHelper;
 import android.content.Intent;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
-import android.text.TextUtils;
-import android.text.TextUtils;
-
-
 
 import androidx.appcompat.app.AppCompatActivity;
 
 public class CadastroActivity extends AppCompatActivity {
 
+    EditText editEmail, editSenha;
+    Button btnCadastrar, btnVoltar;
+    DBHelper dbHelper;
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastro);
 
-        EditText editEmail = findViewById(R.id.etEmail);
-        EditText editSenha = findViewById(R.id.etSenha);
-        Button btnCadastrar = findViewById(R.id.btnCadastrar);
+        editEmail = findViewById(R.id.etEmail);
+        editSenha = findViewById(R.id.etSenha);
+        btnCadastrar = findViewById(R.id.btnCadastrar);
+        btnVoltar = findViewById(R.id.btnVoltarCadastro);
+        dbHelper = new DBHelper(this);
 
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,21 +33,28 @@ public class CadastroActivity extends AppCompatActivity {
                 String email = editEmail.getText().toString().trim();
                 String senha = editSenha.getText().toString().trim();
 
-                if (TextUtils.isEmpty(email) || TextUtils.isEmpty(senha)) {
+                if (email.isEmpty() || senha.isEmpty()) {
                     Toast.makeText(CadastroActivity.this, "Preencha todos os campos", Toast.LENGTH_SHORT).show();
                 } else {
-                    com.example.bancouni.DBHelper DBHelper = null;
-                    boolean sucesso = DBHelper.inserirUsuario(email, senha);
-                    if (sucesso) {
-                        Toast.makeText(CadastroActivity.this, "Cadastro realizado!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(CadastroActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        finish();
+                    boolean inserido = dbHelper.inserirUsuario(email, senha);
+
+                    if (inserido) {
+                        Toast.makeText(CadastroActivity.this, "Cadastro realizado com sucesso!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(CadastroActivity.this, LoginActivity.class));
+                        finish(); 
                     } else {
-                        Toast.makeText(CadastroActivity.this, "Erro ao cadastrar", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(CadastroActivity.this, "Erro ao cadastrar usuário", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         });
+
+        btnVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish(); 
+            }
+        });
     }
 }
+
