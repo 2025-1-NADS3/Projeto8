@@ -71,8 +71,6 @@ Utiliza Mocking (MagicMock) para verificar mensagens exibidas
 
 
 Teste de Carga com base em salvar_usuario()
-python
-CopiarEditar
 import time
 import threading
 import random
