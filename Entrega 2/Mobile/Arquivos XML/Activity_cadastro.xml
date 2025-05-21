@@ -1,0 +1,81 @@
+<!-- Botão Voltar --> 
+<Button 
+    android:id="@+id/btnVoltarCadastro" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="voltar" 
+    android:layout_gravity="start" 
+    android:textStyle="bold" 
+    android:textColor="#FFFFFF" 
+    android:backgroundTint="#01497C" 
+    android:paddingHorizontal="16dp" 
+    android:layout_marginBottom="16dp" /> 
+ 
+<!-- Logomarca --> 
+<ImageView 
+    android:id="@+id/imgLogoCadastro" 
+    android:layout_width="150dp" 
+    android:layout_height="150dp" 
+    android:src="@drawable/logo_bancouni" 
+android:layout_marginBottom="12dp" /> 
+ 
+<!-- Nome do App --> 
+<TextView 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="BancoUni" 
+    android:textSize="28sp" 
+    android:textStyle="bold" 
+    android:textColor="#DCE5EE" 
+    android:layout_marginBottom="24dp" /> 
+ 
+<!-- Campos de entrada --> 
+<EditText 
+    android:id="@+id/etEmail" 
+    android:layout_width="match_parent" 
+    android:layout_height="50dp" 
+    android:hint="EMAIL" 
+    android:background="@drawable/edit_text_background" 
+    android:padding="12dp" 
+    android:layout_marginBottom="12dp" 
+    android:inputType="textEmailAddress" /> 
+ 
+<EditText 
+    android:id="@+id/etUsuario" 
+    android:layout_width="match_parent" 
+    android:layout_height="50dp" 
+    android:hint="USUÁRIO" 
+    android:background="@drawable/edit_text_background" 
+    android:padding="12dp" 
+    android:layout_marginBottom="12dp" /> 
+ 
+<EditText 
+    android:id="@+id/etSenha" 
+    android:layout_width="match_parent" 
+    android:layout_height="50dp" 
+    android:hint="SENHA" 
+    android:background="@drawable/edit_text_background" 
+    android:padding="12dp" 
+    android:inputType="textPassword" 
+    android:layout_marginBottom="12dp" /> 
+ 
+<EditText 
+    android:id="@+id/etConfirmarSenha" 
+    android:layout_width="match_parent" 
+    android:layout_height="50dp" 
+    android:hint="CONFIRMAR SENHA" 
+    android:background="@drawable/edit_text_background" 
+    android:padding="12dp" 
+    android:inputType="textPassword" 
+    android:layout_marginBottom="24dp" /> 
+ 
+<!-- Botão Entrar --> 
+<Button 
+    android:id="@+id/btnCadastrar" 
+    android:layout_width="match_parent" 
+    android:layout_height="50dp" 
+    android:text="Entrar" 
+    android:textStyle="bold" 
+    android:textColor="#FFFFFF" 
+    android:backgroundTint="#002A48" /> 
+ 
