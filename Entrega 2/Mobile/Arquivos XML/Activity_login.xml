@@ -1,0 +1,98 @@
+<Button 
+    android:id="@+id/btnVoltar" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="voltar" 
+    android:textColor="#FFFFFF" 
+    android:backgroundTint="#1B5A7D" /> 
+ 
+ 
+<ImageView 
+    android:id="@+id/logoLogin" 
+    android:layout_width="150dp" 
+    android:layout_height="150dp" 
+    android:layout_centerHorizontal="true" 
+    android:layout_marginTop="60dp" 
+    android:src="@drawable/logo_bancouni" 
+    android:contentDescription="Logo BancoUni" /> 
+ 
+ 
+<TextView 
+    android:id="@+id/txtBancoUni" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:text="BancoUni" 
+    android:textSize="24sp" 
+    android:textStyle="bold" 
+    android:layout_below="@id/logoLogin" 
+    android:layout_centerHorizontal="true" 
+    android:layout_marginTop="8dp" 
+    android:textColor="#FFFFFF" /> 
+ 
+ 
+<EditText 
+    android:id="@+id/editNome" 
+    android:layout_width="300dp" 
+    android:layout_height="50dp" 
+    android:hint="NOME" 
+    android:inputType="textPersonName" 
+    android:background="@drawable/edit_text_background" 
+    android:padding="12dp" 
+    android:layout_centerHorizontal="true" 
+    android:layout_below="@id/txtBancoUni" 
+    android:layout_marginTop="40dp" /> 
+ 
+ 
+<EditText 
+    android:id="@+id/editSenha" 
+    android:layout_width="300dp" 
+    android:layout_height="50dp" 
+    android:hint="SENHA" 
+    android:inputType="textPassword" 
+    android:background="@drawable/edit_text_background" 
+    android:padding="12dp" 
+    android:layout_centerHorizontal="true" 
+    android:layout_below="@id/editNome" 
+    android:layout_marginTop="20dp" /> 
+ 
+ 
+<LinearLayout 
+    android:id="@+id/mostrarSenhaLayout" 
+    android:layout_width="wrap_content" 
+    android:layout_height="wrap_content" 
+    android:orientation="horizontal" 
+    android:layout_below="@id/editSenha" 
+    android:layout_marginTop="8dp" 
+    android:layout_alignStart="@id/editSenha"> 
+ 
+    <ImageView 
+        android:id="@+id/iconeOlho" 
+        android:layout_width="24dp" 
+        android:layout_height="24dp" 
+        android:src="@drawable/ic_eye" 
+        android:contentDescription="Mostrar senha" /> 
+ 
+    <TextView 
+        android:id="@+id/txtMostrarSenha" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="MOSTRAR SENHA" 
+        android:textColor="#FFFFFF" 
+        android:layout_marginStart="6dp" 
+        android:textSize="12sp" /> 
+</LinearLayout> 
+ 
+ 
+<Button 
+    android:id="@+id/btnFazerLogin" 
+    android:layout_width="250dp" 
+    android:layout_height="50dp" 
+    android:text="Login" 
+    android:textAllCaps="false" 
+    android:textStyle="bold" 
+    android:textColor="#FFFFFF" 
+    android:backgroundTint="#062E4D" 
+    android:layout_below="@id/mostrarSenhaLayout" 
+    android:layout_centerHorizontal="true" 
+    android:layout_marginTop="32dp" /> 
+ 
