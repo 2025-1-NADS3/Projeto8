@@ -1,0 +1,128 @@
+import unittest
+from unittest.mock import MagicMock
+
+class TestApp(unittest.TestCase):
+
+    def test_campos_vazios(self):
+        app = App()
+        app.show_message = MagicMock()
+        app.name = ""
+        app.password = ""
+        app.handle_login()
+        app.show_message.assert_called_with("Preencha todos os campos")
+
+    def test_login_sucesso(self):
+        app = App()
+        app.show_message = MagicMock()
+        app.name = "admin"
+        app.password = "1234"
+        app.handle_login()
+        app.show_message.assert_called_with("Login bem-sucedido!")
+
+    def test_login_falho(self):
+        app = App()
+        app.show_message = MagicMock()
+        app.name = "usuario"
+        app.password = "senhaerrada"
+        app.handle_login()
+        app.show_message.assert_called_with("Nome ou senha incorretos")
+
+    def test_salvamento_firebase_simples(self):
+        app = App()
+        app.name = "joao"
+        app.password = "abcd"
+        resultado = app.salvar_usuario()
+        self.assertTrue(resultado)
+        self.assertIn("usuarios", app.database)
+
+    def test_integracao_login(self):
+        app = App()
+        app.name = "admin"
+        app.password = "1234"
+        app.show_message = MagicMock()
+        app.handle_login()
+        app.show_message.assert_called_with("Login bem-sucedido!")
+
+    def test_integracao_firebase(self):
+        app = App()
+        app.name = "maria"
+        app.password = "senha123"
+        ok = app.salvar_usuario()
+        self.assertTrue(ok)
+        self.assertEqual(app.database["usuarios"]["nome"], "maria")
+
+if __name__ == '__main__':
+    unittest.main()
+
+
+
+
+O código acima representa uma suíte de testes automatizados aplicada a uma aplicação com funcionalidades de login e cadastro de usuário. Ele cobre testes:
+
+Unitários (verificando lógica isolada)
+
+De integração (combinando múltiplas funções)
+
+Utiliza Mocking (MagicMock) para verificar mensagens exibidas
+
+
+
+
+
+
+Teste de Carga com base em salvar_usuario()
+python
+CopiarEditar
+import time
+import threading
+import random
+import string
+
+# Classe App simulada, compatível com os testes anteriores
+class App:
+    def __init__(self):
+        self.database = {}
+
+    def salvar_usuario(self):
+        # Simula tempo de rede / escrita em banco
+        time.sleep(0.05)
+        nome = ''.join(random.choices(string.ascii_lowercase, k=5))
+        senha = ''.join(random.choices(string.ascii_letters + string.digits, k=8))
+
+        # Simula o Firebase com um dicionário em memória
+        if "usuarios" not in self.database:
+            self.database["usuarios"] = {}
+        self.database["usuarios"]["nome"] = nome
+        self.database["usuarios"]["senha"] = senha
+        return True
+
+# Função de Teste de Carga
+def teste_carga(app, num_requisicoes=100):
+    tempos = []
+
+    def requisicao():
+        inicio = time.time()
+        app.salvar_usuario()
+        fim = time.time()
+        tempos.append(fim - inicio)
+
+    threads = []
+    for _ in range(num_requisicoes):
+        t = threading.Thread(target=requisicao)
+        threads.append(t)
+        t.start()
+
+    for t in threads:
+        t.join()
+
+    tempo_medio = sum(tempos) / len(tempos)
+    print(f"\n--- RELATÓRIO DE TESTE DE CARGA ---")
+    print(f"Total de requisições simuladas: {num_requisicoes}")
+    print(f"Tempo médio por requisição: {tempo_medio:.4f} segundos")
+    print(f"Maior tempo: {max(tempos):.4f} s")
+    print(f"Menor tempo: {min(tempos):.4f} s")
+
+# Execução
+if __name__ == '__main__':
+    app = App()
+    teste_carga(app, num_requisicoes=100)
