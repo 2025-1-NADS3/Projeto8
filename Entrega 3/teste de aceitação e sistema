@@ -1,3 +1,6 @@
+Arquivo: FluxoAceitacaoTest.java
+Objetivo: Validar o fluxo de cadastro e login do ponto de vista do usuário final.
+
 package com.exemplo.bancouni;
 
 import androidx.test.core.app.ActivityScenario;
@@ -30,17 +33,16 @@ public class FluxoAceitacaoTest {
 
         onView(ViewMatchers.withId(R.id.email)).perform(ViewActions.typeText("aceitacao@teste.com"), ViewActions.closeSoftKeyboard());
         onView(ViewMatchers.withId(R.id.senha)).perform(ViewActions.typeText("123456"), ViewActions.closeSoftKeyboard());
-
         onView(ViewMatchers.withId(R.id.btnEntrar)).perform(ViewActions.click());
 
-        // Verifica se a tela principal foi acessada
         onView(withText("LOGIN")).check(matches(withText("LOGIN")));
     }
 }
 
 
-
-
+2. Teste de Sistema com Verificação Direta no Banco
+Arquivo: DBHelperTest.java
+Objetivo: Validar a integração entre a lógica de persistência (SQLite) e o comportamento esperado da aplicação.
 
 
 package com.exemplo.bancouni;
@@ -66,11 +68,9 @@ public class DBHelperTest {
 
     @Test
     public void testInserirUsuarioESucessoLogin() {
-        // Insere um usuário
         boolean inserido = dbHelper.inserirDados("sistema@teste.com", "usuarioTeste", "123456");
         assertTrue(inserido);
 
-        // Verifica se o login funciona
         boolean loginOk = dbHelper.verificaUsuarioSenha("sistema@teste.com", "123456");
         assertTrue(loginOk);
     }
@@ -81,3 +81,49 @@ public class DBHelperTest {
         assertFalse(loginErrado);
     }
 }
+Explicação dos Testes
+Teste de Aceitação
+Objetivo:
+Validar o sistema do ponto de vista do usuário final, garantindo que o fluxo funcional (cadastro e login) possa ser executado corretamente por uma pessoa utilizando a interface gráfica.
+
+Características:
+
+Utiliza a ferramenta Espresso para simular interações reais na interface (digitação, clique, etc).
+
+Avalia se os comportamentos do sistema atendem aos critérios de aceitação definidos pelos requisitos.
+
+Confirma que o usuário consegue:
+
+Se cadastrar
+
+Efetuar login
+
+Navegar até a próxima tela com sucesso
+
+Classificação:
+
+Nível: Teste de aceitação
+
+Tipo: Caixa preta (foco no comportamento visível, não na implementação interna)
+
+Teste de Sistema
+Objetivo:
+Verificar o funcionamento do sistema como um todo, avaliando a integração entre:
+
+Interface do usuário
+
+Lógica de negócio
+
+Banco de dados SQLite
+
+Características:
+
+Realiza testes que percorrem o fluxo completo, mas também acessa e valida diretamente o estado do banco de dados.
+
+Garante que os dados cadastrados via interface realmente sejam armazenados e utilizados corretamente na autenticação.
+
+Classificação:
+
+Nível: Teste de sistema
+
+Tipo: Caixa preta com integração
