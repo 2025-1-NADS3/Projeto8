@@ -1,0 +1,125 @@
+<LinearLayout 
+    android:layout_width="match_parent" 
+    android:layout_height="wrap_content" 
+    android:orientation="vertical" 
+    android:padding="20dp"> 
+ 
+    <!-- Voltar --> 
+    <Button 
+        android:id="@+id/btnVoltarPagamentos" 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="voltar" 
+        android:textColor="#FFFFFF" 
+        android:backgroundTint="#1B5A7D" /> 
+ 
+    <!-- Logo --> 
+    <LinearLayout 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:gravity="center_horizontal" 
+        android:orientation="vertical" 
+        android:layout_marginTop="32dp"> 
+ 
+        <ImageView 
+            android:id="@+id/logoBanco" 
+            android:layout_width="200dp" 
+            android:layout_height="200dp" 
+            android:src="@drawable/logo_bancouni" /> 
+    </LinearLayout> 
+    <!-- Saldo --> 
+    <TextView 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="Saldo da conta:" 
+        android:textColor="#FFFFFF" 
+        android:textStyle="bold" 
+        android:layout_marginTop="20dp" /> 
+ 
+    <LinearLayout 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal" 
+        android:gravity="center_vertical" 
+        android:layout_marginTop="8dp"> 
+ 
+        <EditText 
+            android:id="@+id/editSaldoPagamentos" 
+            android:layout_width="0dp" 
+            android:layout_weight="1" 
+            android:layout_height="wrap_content" 
+            android:inputType="textPassword" 
+            android:text="••••" 
+            android:enabled="false" 
+            android:background="@android:drawable/edit_text" 
+            android:padding="10dp" 
+            android:textColor="#000000" /> 
+ 
+        <ImageButton 
+            android:id="@+id/btnToggleSaldoPagamentos" 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:src="@android:drawable/ic_menu_view" 
+            android:background="@android:color/transparent" 
+            android:contentDescription="Ocultar Saldo" /> 
+ 
+        <TextView 
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content" 
+            android:text="OCULTAR SALDO" 
+            android:textColor="#FFFFFF" 
+            android:textSize="10sp" 
+            android:layout_marginStart="4dp"/> 
+    </LinearLayout> 
+ 
+    <!-- Área de Pagamentos --> 
+    <TextView 
+        android:layout_width="wrap_content" 
+        android:layout_height="wrap_content" 
+        android:text="Área de Pagamentos" 
+        android:textSize="18sp" 
+        android:textStyle="bold" 
+        android:textColor="#102331" 
+        android:layout_marginTop="32dp" /> 
+ 
+    <EditText 
+        android:id="@+id/inputChaves" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="16dp" 
+        android:hint="Minhas chaves" 
+        android:background="@drawable/rounded_edittext" 
+        android:padding="10dp" 
+        android:textColorHint="#000000"/> 
+ 
+    <EditText 
+        android:id="@+id/inputQRCode" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="16dp" 
+        android:hint="QR Code" 
+        android:background="@drawable/rounded_edittext" 
+        android:padding="10dp" 
+        android:textColorHint="#000000"/> 
+ 
+    <EditText 
+        android:id="@+id/inputTransferir" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:layout_marginTop="16dp" 
+        android:hint="Transferir" 
+        android:background="@drawable/rounded_edittext" 
+        android:padding="10dp" 
+        android:textColorHint="#000000"/> 
+ 
+    <!-- Botão Pagar --> 
+    <Button 
+        android:id="@+id/btnPagar" 
+        android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+        android:text="Pagar" 
+        android:layout_marginTop="24dp" 
+        android:backgroundTint="#0F2C47" 
+        android:textColor="#FFFFFF"/> 
+</LinearLayout> 
+ 
