@@ -1,0 +1,34 @@
+package com.example.bancouni;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.widget.Button;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+public class EducacaoFinanceiraActivity extends AppCompatActivity {
+
+    Button btnMetas, btnJurosCompostos, btnQuantoPoupar, btnVoltar;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_educacaofinanceira);
+        Button btnVoltar = findViewById(R.id.btnVoltar);
+        btnMetas = findViewById(R.id.btnMetas);
+        btnJurosCompostos = findViewById(R.id.btnJurosCompostos);
+        btnQuantoPoupar = findViewById(R.id.btnQuantoPoupar);
+        btnVoltar = findViewById(R.id.btnVoltar);
+
+        btnMetas.setOnClickListener(v ->
+                startActivity(new Intent(this, MetasFinanceirasActivity.class)));
+
+        btnJurosCompostos.setOnClickListener(v ->
+                startActivity(new Intent(this, JurosCompostosActivity.class)));
+
+        btnQuantoPoupar.setOnClickListener(v ->
+                startActivity(new Intent(this, QuantoPouparActivity.class)));
+
+        btnVoltar.setOnClickListener(v -> finish());
+    }
+}
