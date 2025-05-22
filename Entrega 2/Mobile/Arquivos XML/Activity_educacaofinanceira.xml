@@ -1,70 +1,70 @@
-<LinearLayout 
-    android:layout_width="match_parent" 
-    android:layout_height="wrap_content" 
-    android:orientation="vertical" 
-    android:padding="20dp"> 
- 
-    <Button 
-        android:id="@+id/btnVoltar" 
-        android:layout_width="80dp" 
-        android:layout_height="40dp" 
-        android:text="voltar" 
-        android:backgroundTint="#165C90" 
-        android:textColor="#FFFFFF" /> 
- 
-    <ImageView 
-        android:id="@+id/logoeducacaofinanceira" 
-        android:layout_width="250dp" 
-        android:layout_height="250dp" 
-        android:layout_centerHorizontal="true" 
-        android:layout_marginTop="40dp" 
-        android:src="@drawable/logo_bancouni" 
-        android:contentDescription="BancoUni Logo" /> 
- 
-    <TextView 
-        android:id="@+id/txtTitulo" 
-        android:layout_width="wrap_content" 
-        android:layout_height="wrap_content" 
-        android:text="Educação Financeira" 
-        android:textSize="18sp" 
-        android:textStyle="bold" 
-        android:textColor="#0A2F4F" 
-        android:layout_gravity="center" 
-        android:layout_marginTop="12dp" 
-        android:layout_marginBottom="12dp" /> 
- 
-    <!-- Card Container --> 
-    <LinearLayout 
-        android:layout_width="match_parent" 
-        android:layout_height="wrap_content" 
-        android:orientation="vertical" 
-        android:elevation="6dp" 
-        android:padding="16dp" 
-        android:layout_marginBottom="24dp" 
-        android:layout_marginTop="4dp" 
-        android:backgroundTint="#FFFFFF" 
-        android:layout_margin="8dp" 
-        android:layout_gravity="center" 
-        android:clipToPadding="false" 
-        android:background ="@drawable/card_background" > 
- 
-        <TextView 
-            android:id="@+id/txtDescricao" 
-            android:layout_width="match_parent" 
-            android:layout_height="wrap_content" 
-            android:textColor="#333333" 
-            android:textSize="14sp" 
-            android:text=""/> 
-    </LinearLayout> 
- 
-    <!-- Piggy bank image --> 
-    <ImageView 
-        android:id="@+id/imgPiggy" 
-        android:layout_width="match_parent" 
-        android:layout_height="200dp" 
-        android:scaleType="centerCrop" 
-        android:src="@drawable/piggybank" 
-        android:layout_marginTop="12dp" 
-        android:layout_marginBottom="24dp"/> 
-</LinearLayout> 
- 
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#7A94A2">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnVoltar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#1B5A7D"
+            android:text="voltar"
+            android:textColor="#FFFFFF" />
+
+        <TextView
+            android:text="Educação Financeira"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#ffffff"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="60dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="💡 Dicas:\n\n• Anote seus gastos\n• Tenha uma reserva\n• Evite impulsos\n• Compare preços"
+            android:textSize="20sp"
+            android:textColor="#374151"
+            android:textStyle="bold"
+            android:lineSpacingExtra="8dp"
+            android:paddingBottom="24dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btnMetas"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📈 Metas Financeiras"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#3C3C3C"  />
+
+        <Button
+            android:id="@+id/btnJurosCompostos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📊 Calculadora de Juros Compostos"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#062E4D"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/btnQuantoPoupar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="💰 Quanto Poupar por Mês"
+            android:layout_marginTop="12dp"
+            android:backgroundTint="#6366F1"
+            android:textColor="#FFFFFF" />
+
+
+    </LinearLayout>
+</ScrollView>
